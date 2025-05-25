@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/1d5d4c6059.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/sultanLogo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web developer</p>
+          <h1>
+            Hi, I'm <span id="third">Sultan</span> <br />Ghani from Pakistan.
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/about2.PNG" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="subtitle">About Me</h1>
+            <p>
+              Assalamualaikum, I am Sultan Ghani from Pakistan Karachi, I have done my 
+              primary education from saudia Arabia Riyadh and completed
+              secondary from Karachi. I have done my Intermediate in 
+              pre engineering and then began my career in Computer Science at Federal Urdu 
+              University of Arts Science and Technology which is the state 
+              university of Pakistan. Along with that I like to learn new
+              languages, currently I can speak four languages which are English
+              Pashto, Urdu and Arabic. MY aim in life is to become a data scientist
+              and contribute to the feild by solving real life problems.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br />Web App Development</li>
+                <li><span>Data Science</span><br />Data Analytics</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2021 - Current</span><br />English teacher at Ahsan English Langugae Academey</li>
+                  <li><span>2020 - 2021</span><br />Secondary School teacher at Ahsan Public School</li>
+                  <li><span>2021 - 2022</span><br />Teaching Maths to secondary classes at The Edge schooling system</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>2022</span><br />BSCS from Federal Urdu University of Arts Science & Technology (continued)</li>
+                  <li><span>2023</span><br />Full stack Web Development at sindh Governor Initiative</li>
+                  <li><span>2021</span><br />Intermediate from Gov. Dehli college Hussainabad</li>
+                  
+
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------------SERVIES------------------------------------>
+   <div id="services">
+        <div class="container">
+          <h1 class="subtitle">My Service</h1>
+          <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>web Development   </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, ea.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-duotone fa-solid fa-language"></i>
+                <h2>English Language   </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, ea.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-language"></i>
+                <h2>اللغة العربية
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, ea.</p>
+                <a href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+   </div>
+
+   <!----------------------------portfolio-->
+   <div id="portfolio">
+    <div class="container">
+      <h1 class="subtitle">MY Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/image1.jpg" >
+          <div class="layer">
+            <h3><i class="fa-solid fa-earth-europe"></i> Social Media App</h3>
+            <p>This App connects you to the 
+              native English speakers around
+              the world. Download it by clicking 
+              the link below.👇 
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/image2.jpg" >
+          <div class="layer">
+            <h3><i class="fa-solid fa-language"></i> Arabic learning App</h3>
+            <p>This App connects you to the 
+              native English speakers around
+              the world. Download it by clicking 
+              the link below.👇 
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/image3.jpg" >
+          <div class="layer">
+            <h3><i class="fa-solid fa-book-quran"></i> Quran Recitation App</h3>
+            <p>Through this App you can listen
+              to any Quran Reciter. Download it
+               by clicking the link below.👇 
+            </p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        </script>
+  </body>
+</html>
